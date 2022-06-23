@@ -24,9 +24,10 @@ const Login = ({ setUser }) => {
             if(user) {
                 setUser(user)
                 // Redirect to movies page after successful login
-                navigate('/movies')   
-            } 
-            throw new Error
+                navigate('/movies')
+            } else {
+                throw new Error       
+            }
         } catch(e) {
             setMessage('Log in Failed - Try Again')
         }
